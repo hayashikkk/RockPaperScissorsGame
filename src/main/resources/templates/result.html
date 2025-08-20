@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<link rel="stylesheet" href="style.css" type="text/css">
+
+<head>
+	<meta charset="UTF-8">
+	<title>じゃんけん結果</title>
+</head>
+
+<body>
+	<div class="container">
+		<h1>じゃんけん結果</h1>
+		
+		<div class="result">
+			<div class="score">
+				<div class="score-item">
+					<div>プレイヤー:</div>
+					<div th:text="${playerHand}"></div>
+				</div>
+				<div class="score-item">
+					<div>コンピューター:</div>
+					<div th:text="${computerHand}"></div>
+				</div>
+			</div>
+			
+			<div class="game-result">
+				結果: <span th:text="${result}"></span>
+			</div>
+		</div>
+		
+		<a href="/game" class="game-button">もう一度プレイ</a>
+	</div>
+</body>
+
+</html>

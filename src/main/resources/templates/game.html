@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<link rel="stylesheet" href="style.css" type="text/css">
+
+<head>
+	<meta charset="UTF-8">
+	<title>じゃんけんゲーム</title>
+</head>
+
+<body>
+
+	<div class="container">
+		<h1>じゃんけんゲーム</h1>
+
+		<div th:if="${errorMessage}" class="error-message" th:text="${errorMessage}"></div>
+
+		<form method="post" action="/result">
+		<input type="radio" name="playerChoice" th:value="${num0}" th:text="${hand0}"><br>
+		<input type="radio" name="playerChoice" th:value="${num1}" th:text="${hand1}"><br>
+		<input type="radio" name="playerChoice" th:value="${num2}" th:text="${hand2}"><br>
+		<br>
+
+			<input type="submit" value="送信" class="game-button">
+
+		</form>
+	</div>
+</body>
+
+</html>
